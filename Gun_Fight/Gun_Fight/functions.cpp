@@ -31,8 +31,67 @@ void draw_button(int left,int top,int right,int buttom,LPCTSTR string,int state,
 	outtextxy(left+15, top+15, string);
 
 }
-void set_init(Settings* set) {
-	set->music = 1;
-	set->voice = 1;
+//w=119 a=97 s=113 d=100
+int key_dect() {
+	static int mode;
+	static int key_down,key;
+	static clock_t ori;
+	clock_t current;
+	if (!mode) {
+		key_down = _kbhit();
+		if (key_down) {
+			mode = 1;
+			ori = clock();
+		}
+		else
+			key = 0;
+	}
+	else if (mode == 1) {
+		current = clock();
+		if (current - ori > 70) {
+			if (_kbhit() == key_down && key_down==1) {
+				key=_getch();
+				mode = 2;
+			}
+			else
+			mode = 0;
+		}
+	}
+	else if (mode == 2) {
+		if (_kbhit())
+			key = _getch();
+		else {
+			key = 0;
+			mode = 0;
+		}
+	}
+	return key;
+}
 
+
+void update(Status *st,int key) {
+	static int flag;
+	if (key == 100) {
+		st->dir = Right;
+		st->walk = 1;
+	}
+	else if (key == 97) {
+		st->dir = Left;
+		st->walk = 1;
+	}
+	else {
+		st->walk = 0;
+	}
+}
+void rlmirror(IMAGE* ori)
+{
+	printf("%d\n", ori->getwidth());
+	DWORD* N = GetImageBuffer(ori);
+	for (int hei = 0; hei < ori->getheight(); hei++)
+		for (int low = 0, wid = ori->getwidth() - 1; low < wid; low++, wid--)
+		{
+			COLORREF l = N[hei * ori->getwidth() + low];
+			N[hei * ori->getwidth() + low] = N[hei * ori->getwidth() + wid];
+			N[hei * ori->getwidth() + wid] = l;
+		}
 }

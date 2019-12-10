@@ -1,17 +1,26 @@
 ﻿  animations.cpp
-C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\animations.cpp(12,75): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\animations.cpp(12,61): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\animations.cpp(12,35): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\animations.cpp(16,72): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\animations.cpp(16,60): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\animations.cpp(16,35): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\animations.cpp(20,72): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\animations.cpp(20,60): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\animations.cpp(20,35): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-  functions.cpp
-  main.cpp
-  menu.cpp
-  options.cpp
-C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\options.cpp(3,10): warning C4101: 'font': unreferenced local variable
-  Generating Code...
+C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\animations.cpp(7,92): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\animations.cpp(7,78): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\animations.cpp(7,52): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\animations.cpp(7,26): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\animations.cpp(14,92): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\animations.cpp(14,78): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\animations.cpp(14,52): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\animations.cpp(14,26): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\animations.cpp(21,92): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\animations.cpp(21,78): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\animations.cpp(21,52): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\animations.cpp(21,26): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\animations.cpp(30,106): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\animations.cpp(30,93): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\animations.cpp(30,52): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\animations.cpp(30,26): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\animations.cpp(37,106): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\animations.cpp(37,93): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\animations.cpp(37,52): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\animations.cpp(37,26): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\animations.cpp(44,107): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\animations.cpp(44,94): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\animations.cpp(44,52): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Gun_Fight\animations.cpp(44,26): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
   Gun_Fight.vcxproj -> C:\Users\CJX32\Desktop\My_Game\Gun_Fight\Debug\Gun_Fight.exe

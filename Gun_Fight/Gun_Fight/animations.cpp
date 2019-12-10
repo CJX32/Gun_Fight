@@ -1,74 +1,187 @@
 #include "animations.h"
-void stand() {
-	initgraph(window_width, window_height, SHOWCONSOLE);
-	IMAGE character;
-	loadimage(&character, character_pic_path,pic_w*times,pic_h*times,true);
-	Dispose dis;
-	dis.setImage(character, 0, 0);
-	dis.setCutoutImage(RGB(173, 218, 165), 0);
-	character = dis.Putimage();
-	while (1) {
-		cleardevice();
-		putimage(0, 0, 32 * times, 52.5 * times, &character, 14.5 * times, 13.4 * times);
-	
-		Sleep(test_delay);
-		cleardevice();
-		putimage(0, 0, 32 * times, 52.5 * times, &character, 48.5*times, 13.4*times);
-	
-		Sleep(test_delay);
-		cleardevice();
-		putimage(0, 0, 32 * times, 52.5 * times, &character, 81.5*times, 13.4*times);
+void stand(int x,int y,IMAGE character,IMAGE character_anti,int dir) {
+	static int frame;
+	if (dir == Right) {
+		if (frame == 0) {
+			cleardevice();
+			putimage(x, (y- 52.5) * times, 32 * times, 52.5 * times, &character, 14.5 * times, 13.4 * times);
 
-		Sleep(test_delay);
+			Sleep(test_delay);
+			frame++;
+		}
+		if (frame == 1) {
+			cleardevice();
+			putimage(x, (y- 52.5) * times, 32 * times, 52.5 * times, &character, 48.5 * times, 13.4 * times);
+
+			Sleep(test_delay);
+			frame++;
+		}
+		if (frame == 2) {
+			cleardevice();
+			putimage(x, (y- 52.5) * times, 32 * times, 52.5 * times, &character, 81.5 * times, 13.4 * times);
+
+			Sleep(test_delay);
+			frame = 0;
+		}
 	}
-	Sleep(40000);
+	else {
+		if (frame == 0) {
+			cleardevice();
+			putimage(x, (y- 52.5) * times, 32 * times, 52.5 * times, &character_anti, (480- 14.5 -32)*times, 13.4 * times);
+
+			Sleep(test_delay);
+			frame++;
+		}
+		if (frame == 1) {
+			cleardevice();
+			putimage(x, (y- 52.5) * times, 32 * times, 52.5 * times, &character_anti, (480 - 48.5-32)*times, 13.4 * times);
+
+			Sleep(test_delay);
+			frame++;
+		}
+		if (frame == 2) {
+			cleardevice();
+			putimage(x, (y- 52.5) * times, 32 * times, 52.5 * times, &character_anti, (480 - 81.5 -32)*times, 13.4 * times);
+
+			Sleep(test_delay);
+			frame = 0;
+		}
+	}
 }
-void walk(int *x,int *y) {
-	initgraph(window_width, window_height, SHOWCONSOLE);
-	IMAGE character;
-	loadimage(&character, character_pic_path, pic_w * times, pic_h * times, true);
-	Dispose dis;
-	dis.setImage(character, 0, 0);
-	dis.setCutoutImage(RGB(173, 218, 165), 0);
-	dis.setCutoutImage(RGB(255, 0, 0), 0);
-	character = dis.Putimage();
+void walk(int *x,int *y,IMAGE character,IMAGE character_anti,int dir) {
+	static int frame;
+	
+	if (dir == Right) {
+		if (*x + pace + 40 * times > window_width)
+			*x -= pace;
+		if (frame == 0) {
+			cleardevice();
+			putimage(*x += pace, (*y- 49) * times, 45 * times, 49 * times, &character, 16 * times, 298 * times);
+			Sleep(test_delay);
+			frame++;
+		}
+		else if (frame == 1) {
+			cleardevice();
+			putimage(*x += pace, (*y- 49) * times, 45 * times, 49 * times, &character, 63 * times, 298 * times);
+			Sleep(test_delay);
+			frame++;
+		}
+		else if (frame == 2) {
+			cleardevice();
+			putimage(*x += pace, (*y- 49 )* times, 45 * times, 49 * times, &character, 105 * times, 298 * times);
 
-	while (1) {
-		cleardevice();
-		putimage(*x+=pace, *y, 45 * times, 49 * times, &character, 16 * times, 298 * times);
-		Sleep(test_delay);
-		cleardevice();
-		putimage(*x += pace, *y, 45 * times, 49 * times, &character, 63 * times, 298 * times);
-		Sleep(test_delay);
-		cleardevice();
-		putimage(*x += pace, *y, 45 * times, 49 * times, &character, 105 * times, 298 * times);
-		
-		Sleep(test_delay);
-		cleardevice();
-		putimage(*x += pace, *y, 45 * times, 49 * times, &character, 149 * times, 298 * times);
-	
-		Sleep(test_delay);
-		cleardevice();
-		putimage(*x += pace, *y, 42 * times, 49 * times, &character, 196 * times, 298 * times);
-	
-		Sleep(test_delay);
-		cleardevice();
-		putimage(*x += pace, *y, 45 * times, 49 * times, &character, 237 * times, 298 * times);
-	
-		Sleep(test_delay);
-		cleardevice();
-		putimage(*x += pace, *y, 42 * times, 49 * times, &character, 280 * times, 298 * times);
-		
-		Sleep(test_delay);
-		cleardevice();
-		putimage(*x += pace, *y, 40 * times, 49 * times, &character, 318 * times, 298 * times);
-	
-		Sleep(test_delay);
-		putimage(*x += pace, *y, 44 * times, 50 * times, &character, 357 * times, 298 * times);
-	
-		Sleep(test_delay);
+			Sleep(test_delay);
+			frame++;
+		}
+		else if (frame == 3) {
+			cleardevice();
+			putimage(*x += pace, (*y- 49) * times, 45 * times, 49 * times, &character, 149 * times, 298 * times);
 
+			Sleep(test_delay);
+			frame++;
+		}
+		else if (frame == 4) {
+			cleardevice();
+			putimage(*x += pace, (*y- 49 )* times, 42 * times, 49 * times, &character, 196 * times, 298 * times);
+
+			Sleep(test_delay);
+			frame++;
+		}
+		else if (frame == 5) {
+			cleardevice();
+			putimage(*x += pace, (*y- 49 )* times, 45 * times, 49 * times, &character, 237 * times, 298 * times);
+
+			Sleep(test_delay);
+			frame++;
+		}
+		else if (frame == 6) {
+			cleardevice();
+			putimage(*x += pace, (*y- 49) * times, 42 * times, 49 * times, &character, 280 * times, 298 * times);
+
+			Sleep(test_delay);
+			frame++;
+		}
+		else if (frame == 7) {
+			cleardevice();
+			putimage(*x += pace, (*y- 49) * times, 40 * times, 49 * times, &character, 318 * times, 298 * times);
+
+			Sleep(test_delay);
+			frame++;
+		}
+		else if (frame == 8) {
+			cleardevice();
+			putimage(*x += pace, (*y- 50) * times, 44 * times, 50 * times, &character, 357 * times, 298 * times);
+
+			Sleep(test_delay);
+			frame = 0;
+		}
 	}
+	else {
+		if (*x - pace + 10 < 0)
+			*x += pace;
+		if (frame == 0) {
+			cleardevice();
+			putimage(*x -= pace, (*y- 49) * times, 45 * times, 49 * times, &character_anti, (480-45-16) * times, 298 * times);
+			Sleep(test_delay);
+			frame++;
+		}
+		else if (frame == 1) {
+			cleardevice();
+			putimage(*x -= pace, (*y- 49) * times, 45 * times, 49 * times, &character_anti, (480-45-63) * times, 298 * times);
+			Sleep(test_delay);
+			frame++;
+		}
+		else if (frame == 2) {
+			cleardevice();
+			putimage(*x -= pace, (*y- 49 )* times, 45 * times, 49 * times, &character_anti, (480-45-105) * times, 298 * times);
+
+			Sleep(test_delay);
+			frame++;
+		}
+		else if (frame == 3) {
+			cleardevice();
+			putimage(*x -= pace, (*y- 49) * times, 45 * times, 49 * times, &character_anti, (480-45-149) * times, 298 * times);
+
+			Sleep(test_delay);
+			frame++;
+		}
+		else if (frame == 4) {
+			cleardevice();
+			putimage(*x -= pace, (*y- 49 )* times, 42 * times, 49 * times, &character_anti, (480-42-196) * times, 298 * times);
+
+			Sleep(test_delay);
+			frame++;
+		}
+		else if (frame == 5) {
+			cleardevice();
+			putimage(*x -= pace, (*y- 49) * times, 45 * times, 49 * times, &character_anti, (480-45-237) * times, 298 * times);
+
+			Sleep(test_delay);
+			frame++;
+		}
+		else if (frame == 6) {
+			cleardevice();
+			putimage(*x -= pace, (*y- 49) * times, 42 * times, 49 * times, &character_anti, (480-42-280) * times, 298 * times);
+
+			Sleep(test_delay);
+			frame++;
+		}
+		else if (frame == 7) {
+			cleardevice();
+			putimage(*x -= pace, (*y- 49) * times, 40 * times, 49 * times, &character_anti, (480-40-318) * times, 298 * times);
+
+			Sleep(test_delay);
+			frame++;
+		}
+		else if (frame == 8) {
+			cleardevice();
+			putimage(*x -= pace, (*y - 50) * times, 44 * times, 50 * times, &character_anti, (480-44-357) * times, 298 * times);
+
+			Sleep(test_delay);
+			frame = 0;
+		}
+	}
+	
 }
 void attack() {
 	initgraph(window_width, window_height, SHOWCONSOLE);

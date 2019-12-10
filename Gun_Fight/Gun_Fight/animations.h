@@ -4,8 +4,8 @@
 #include "game_settings.h"
 #include <wingdi.h>
 #pragma comment( lib, "Msimg32" )
-void stand();
-void walk(int *a,int *b);
+void stand(int x, int y, IMAGE character, IMAGE character_anti, int dir);
+void walk(int* x, int* y, IMAGE character, IMAGE character_anti, int dir);
 void attack();
 void fist();
 void fall();

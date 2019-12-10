@@ -3,6 +3,7 @@
 #define game_settings_h
 #include <time.h>
 #include <stdio.h>
+#include <conio.h>
 #include "graphics.h"
 #include "PictiureDispose.h"
 
@@ -12,11 +13,16 @@ typedef struct setting {
 	int emery_num;
 }Settings;
 
+typedef struct status {
+	int dir;
+	int walk;
+}Status;
+
 #define menu_back_path "C:\\Users\\CJX32\\Desktop\\My_Game\\Pictures\\menu_background.jpg"
 #define options_back_path "C:\\Users\\CJX32\\Desktop\\My_Game\\Pictures\\options_background.jpg"
 #define character_pic_path "C:\\Users\\CJX32\\Desktop\\My_Game\\Pictures\\character.bmp"
 
-#define test_delay 60
+#define test_delay 50
 
 #define pic_h 1067
 #define pic_w 480
@@ -56,4 +62,7 @@ typedef struct setting {
 #define cancle 2
 
 #define  pace 10
+
+#define Left 1
+#define Right 2
 #endif
