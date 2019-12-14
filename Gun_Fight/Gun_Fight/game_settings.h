@@ -16,7 +16,24 @@ typedef struct setting {
 typedef struct status {
 	int dir;
 	int walk;
+	int attack_while_walk;
+	int fist;
+	int fire;
+	int fire_2;
 }Status;
+
+typedef struct bullet {
+	int type;
+	int dir;
+	int x;
+	int y;
+	int flag;
+}Bullet;
+
+typedef struct Bullet_list {
+	Bullet* list;
+	int num;
+}bullet_list;
 
 #define menu_back_path "C:\\Users\\CJX32\\Desktop\\My_Game\\Pictures\\menu_background.jpg"
 #define options_back_path "C:\\Users\\CJX32\\Desktop\\My_Game\\Pictures\\options_background.jpg"
@@ -65,4 +82,13 @@ typedef struct status {
 
 #define Left 1
 #define Right 2
+#define Del 3
+
+#define key_D 68
+#define key_A 65
+#define key_O 79
+#define key_I 73
+#define key_P 80
+
+#define bullet_speed 40
 #endif

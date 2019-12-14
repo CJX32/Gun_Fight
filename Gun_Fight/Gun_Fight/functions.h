@@ -8,6 +8,6 @@ void draw_button(int left, int top, int right, int buttom, LPCTSTR string, int s
 int key_dect();
 void update(Status* st, int key);
 void rlmirror(IMAGE* ori);
-
+void bullet_add(bullet_list *t, int x, int y,int dir,int type);
 #endif 
 

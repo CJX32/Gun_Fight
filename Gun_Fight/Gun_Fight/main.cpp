@@ -34,18 +34,36 @@ int main(void) {
 	status_init(st);
 	initgraph(window_width, window_height, SHOWCONSOLE);
 	rlmirror(&character_anti);
+	bullet_list t;
+	bullet_list_init(&t);
 	while (1) {
 		
 		key = key_dect();
+		printf("%d\n", key);
+		if(!st->fire&&!st->fire_2)
 		update(st,key);
-		if (st->walk) {
+		BeginBatchDraw();
+		if (st->fire) {
+			fire_1(&x, &y, character, character_anti, &t,st);
+		}
+		if (st->fire_2) {
+			fire_2(&x, &y, character, character_anti, &t, st);
+		}
+		else if (st->walk) {
 			walk(&x, &y,character,character_anti,st->dir);
+		}
+		else if (st->attack_while_walk) {
+			attack_while_walk(&x, &y, character, character_anti, st->dir,&t);
+		}
+		else if (st->fist) {
+			fist(&x, &y, character, character_anti, st->dir);
 		}
 		else {
 			stand(x,y,character,character_anti,st->dir);
 		}
-		printf("%d\n", y);
-	
+		bullet_display(character, character_anti, t);
+		EndBatchDraw();
+		Sleep(1000);
 	}
 	
 	

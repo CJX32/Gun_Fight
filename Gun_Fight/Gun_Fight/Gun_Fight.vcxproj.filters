@@ -38,25 +38,25 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="animations.h">
-      <Filter>Resource Files</Filter>
+    <ClInclude Include="initialization.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="functions.h">
-      <Filter>Resource Files</Filter>
+    <ClInclude Include="animations.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="game_settings.h">
-      <Filter>Resource Files</Filter>
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="functions.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="menu.h">
-      <Filter>Resource Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="options.h">
-      <Filter>Resource Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="PictiureDispose.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="initialization.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
